@@ -16,7 +16,8 @@
     "react-particles-js": "^3.6.0",
     "react-starfield-animation": "^1.0.1",
     "react-tsparticles": "^2.12.2",
-    "tsparticles": "^3.9.1"
+    "tsparticles": "^3.9.1",
+    "react-starfield": "^1.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
