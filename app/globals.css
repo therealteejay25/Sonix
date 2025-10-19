@@ -18,6 +18,10 @@
   src: url("/DMSans-VariableFont_opsz\,wght.ttf");
 }
 
+*{
+  letter-spacing: -0.5px;
+}
+
 body {
   font-family: "Dm Sans", sans-serif;
   margin: 0;
