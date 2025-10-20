@@ -57,3 +57,9 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes l13{ 
   100%{transform: rotate(1turn)}
 }
+
+.scroll::-webkit-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  display: none; /* Chrome, Safari, Edge */
+}
