@@ -1,9 +1,13 @@
 "use client"
 import { DotsThreeVerticalIcon, SpotifyLogoIcon } from '@phosphor-icons/react'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import EditModal from './EditModal'
 
 const page = () => {
+
+    const [edit, setEdit] = useState(true);
+
   return (
     <div className='bg-black relative flex flex-col items-center h-screen w-screen'>
         <div className="w-full flex justify-between items-center p-5 bg-white/5 border-b border-white/10">
@@ -15,7 +19,7 @@ const page = () => {
       <div className='flex z-10 flex-col mt-28 text-center'>
         <h1 className='text-3xl text-white font-semibold'>Your music is ready!</h1>
         <p className='text-white/50'>Your emotions, turned into sound.</p>
-        <div className='bg-[#0A0A0A] rounded-3xl border border-white/5 p-6'>
+        <div className='bg-[#0A0A0A] mt-12 rounded-3xl border border-white/5 p-6'>
            <div className='flex -space-x-6'>
              <Image src="/img.jpg" alt='' width={200} height={200} className='rounded-2xl h-20 w-20' />
             <Image src="/img.jpg" alt='' width={200} height={200} className='rounded-2xl h-20 w-20' />
@@ -29,13 +33,16 @@ const page = () => {
                 <p className='text-white/50'>Mood: Sad</p>
             </div>
            </div>
-           <div className='flex gap-3 w-full items-center'>
+           <div className='flex mt-5 gap-2 w-full items-center'>
             <button className='text-white justify-center rounded-full bg-[#1DB954] font-semibold items-center flex gap-1 p-3 w-full'><SpotifyLogoIcon className='h-6 w-6' />Add to spotify</button>
             <button className='text-black justify-center rounded-full bg-white font-semibold items-center flex gap-1 p-3'><DotsThreeVerticalIcon className='h-6 font-semibold w-6' /></button>
            </div>
         </div>
       </div>
       <div className='bg-[#1DB954] w-full absolute blur-[200px] h-48 bottom-0'></div>
+      {
+        edit && <EditModal />
+      }
     </div>
   )
 }
