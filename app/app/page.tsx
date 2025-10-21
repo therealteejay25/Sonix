@@ -196,7 +196,7 @@ export default function MoodSlider() {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center bg-black text-white overflow-hidden">
+    <div className="relative px-5 w-full min-h-screen flex flex-col items-center bg-black text-white overflow-hidden">
       {/* Header */}
       <div className="w-full flex justify-between items-center p-5 bg-white/5 border-b border-white/10">
         <div className="text-2xl font-bold">Sonix</div>
@@ -208,16 +208,16 @@ export default function MoodSlider() {
      <div className="flex-1 w-full flex flex-col justify-center items-center gap-12 py-12">
        {/* Body */}
      <div className="flex flex-col md:flex-row gap-7 justify-between items-center">
-         <div className="flex-1 gap-7 w-full max-w-2xl flex flex-col justify-center items-center p-6">
+         <div className="flex-1 gap-7 w-full mx-5 max-w-2xl flex flex-col justify-center items-center p-6">
         <h1 className="text-2xl font-semibold mb-12 text-center">
           How are you feeling today?
         </h1>
 
-        <div className="w-md relative mx-auto overflow-hidden">
+        <div className="max-w-md w-full relative mx-auto overflow-hidden">
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
+            className="absolute md:left-0 left-10 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
             aria-label="Previous slide"
           >
             <svg
@@ -236,7 +236,7 @@ export default function MoodSlider() {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
+            className="absolute md:right-0 right-10 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
             aria-label="Next slide"
           >
             <svg
@@ -275,7 +275,7 @@ export default function MoodSlider() {
                 }}
               >
                 {moods.map((mood, i) => (
-                  <div key={i} className="w-full flex-shrink-0 px-2 md:px-4">
+                  <div key={i} className="w-full flex-shrink-0 px-16 md:px-4">
                     <div
                       className={`relative overflow-hidden max-w-sm rounded-3xl bg-[#0A0A0A] p-8 md:p-10 transition-all duration-700 ${
                         i === currentIndex
@@ -327,13 +327,13 @@ export default function MoodSlider() {
       <div className="flex-1 w-full max-w-2xl flex flex-col justify-center items-center p-6">
    <div className="flex flex-col gap-8 w-full max-w-2xl mx-auto px-4 py-12">
  <div className="flex flex-col items-center gap-7 text-white">
-      <h1 className="text-2xl font-semibold mb-5">
+      <h1 className="text-2xl md:w-auto max-w-xs text-center font-semibold mb-5">
         How many songs do you want to vibe to?
       </h1>
 
       {/* Value above the slider */}
       <div className="relative mt-7 w-64">
-        <p className="absolute left-1/2 -top-8 -translate-x-1/2 bg-white text-black font-semibold text-sm px-3 py-1 rounded shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+        <p className="absolute left-1/2 md:-top-8 -top-12 -translate-x-1/2 bg-white text-black font-semibold text-sm px-3 py-1 rounded shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
           {value}
         </p>
 
@@ -365,7 +365,7 @@ export default function MoodSlider() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide2}
-            className="absolute left-0 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
+            className="absolute md:left-0 left-10 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
             aria-label="Previous slide"
           >
             <svg
@@ -384,7 +384,7 @@ export default function MoodSlider() {
 
           <button
             onClick={nextSlide2}
-            className="absolute right-0 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
+            className="absolute md:right-0 right-10 top-[43%] -translate-y-1/2 z-20 cursor-pointer border border-white/10 rounded-full bg-black/40 backdrop-blur-md p-3 hover:bg-white/10 hover:scale-110 transition-all duration-300 active:scale-95"
             aria-label="Next slide"
           >
             <svg
@@ -423,7 +423,7 @@ export default function MoodSlider() {
                 }}
               >
                 {genres.map((genre, i) => (
-                  <div key={i} className="w-full flex-shrink-0 px-2 md:px-4">
+                  <div key={i} className="w-full flex-shrink-0 px-16 md:px-4">
                     <div
                       className={`relative overflow-hidden max-w-sm rounded-3xl bg-[#0A0A0A] p-8 md:p-10 transition-all duration-700 ${
                         i === currentIndex2
