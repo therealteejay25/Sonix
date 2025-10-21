@@ -6,7 +6,7 @@ import EditModal from './EditModal'
 
 const page = () => {
 
-    const [edit, setEdit] = useState(true);
+    const [edit, setEdit] = useState(false);
 
   return (
     <div className='bg-black relative flex flex-col items-center h-screen w-screen'>
@@ -35,13 +35,13 @@ const page = () => {
            </div>
            <div className='flex mt-5 gap-2 w-full items-center'>
             <button className='text-white justify-center rounded-full bg-[#1DB954] font-semibold items-center flex gap-1 p-3 w-full'><SpotifyLogoIcon className='h-6 w-6' />Add to spotify</button>
-            <button className='text-black justify-center rounded-full bg-white font-semibold items-center flex gap-1 p-3'><DotsThreeVerticalIcon className='h-6 font-semibold w-6' /></button>
+            <button onClick={() => setEdit(true)} className='text-black justify-center rounded-full bg-white font-semibold items-center flex gap-1 p-3'><DotsThreeVerticalIcon className='h-6 font-semibold w-6' /></button>
            </div>
         </div>
       </div>
       <div className='bg-[#1DB954] w-full absolute blur-[200px] h-48 bottom-0'></div>
       {
-        edit && <EditModal />
+        edit && <EditModal setEdit={setEdit} />
       }
     </div>
   )
